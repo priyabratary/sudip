@@ -1,0 +1,694 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*------------------fonts-------------------------------------*/
+@font-face {font-family: "BoosterNextFYW01-Light";
+    src: url("http://db.onlinewebfonts.com/t/539a8782377a5882e762852504de5662.eot");
+    src: url("http://db.onlinewebfonts.com/t/539a8782377a5882e762852504de5662.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/539a8782377a5882e762852504de5662.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/539a8782377a5882e762852504de5662.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/539a8782377a5882e762852504de5662.svg#BoosterNextFYW01-Light") format("svg");
+}
+@font-face {font-family: "BoosterNextFYW01-Regular";
+    src: url("http://db.onlinewebfonts.com/t/6f9181759743577f816fec52bf6c44a8.eot");
+    src: url("http://db.onlinewebfonts.com/t/6f9181759743577f816fec52bf6c44a8.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/6f9181759743577f816fec52bf6c44a8.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/6f9181759743577f816fec52bf6c44a8.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/6f9181759743577f816fec52bf6c44a8.svg#BoosterNextFYW01-Regular") format("svg");
+}
+@font-face {font-family: "BoosterNextFYW01-Bold";
+    src: url("http://db.onlinewebfonts.com/t/59a5f95fa6cbfbc6a7dfa063dee0ab1b.eot");
+    src: url("http://db.onlinewebfonts.com/t/59a5f95fa6cbfbc6a7dfa063dee0ab1b.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/59a5f95fa6cbfbc6a7dfa063dee0ab1b.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/59a5f95fa6cbfbc6a7dfa063dee0ab1b.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/59a5f95fa6cbfbc6a7dfa063dee0ab1b.svg#BoosterNextFYW01-Bold") format("svg");
+}
+@font-face {font-family: "BoosterNextFYW01-Thin";
+    src: url("http://db.onlinewebfonts.com/t/fc63fa4dd8df8990b64f8a878695de8b.eot");
+    src: url("http://db.onlinewebfonts.com/t/fc63fa4dd8df8990b64f8a878695de8b.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/fc63fa4dd8df8990b64f8a878695de8b.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/fc63fa4dd8df8990b64f8a878695de8b.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/fc63fa4dd8df8990b64f8a878695de8b.svg#BoosterNextFYW01-Thin") format("svg");
+}
+
+
+
+
+
+/*
+HOVERNAV
+========
+A simple addition to the dropdown menu (Bootstrap itself is unchanged). Navbar dropdowns appear on hover.
+This works only for screen sizes larger than phones.
+
+If you don't want this, delete this segment of the CSS and delete the corresponding segment of js/vcode.js
+*/
+@media (min-width: 768px) {
+  .navbar-nav .open ul {
+    display: none
+  }
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background: none
+  }
+  .navbar-inverse .navbar-nav > .open > a,
+  .navbar-inverse .navbar-nav > .open > a:hover,
+  .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #969696;
+    background: none
+  }
+  .navbar-nav .hovernav:hover > .dropdown-menu {
+    display: block
+  }
+}
+
+/*
+MEGANAV
+=======
+A simple addition to the dropdown menu (Bootstrap itself is unchanged). When you add GRAND-CHILD links in the navbar: on screens larger than phones, Meganav will transform the dropdown into a mega-menu, with child-links displayed as menu-column heads (in bold).
+
+If you don't want this, delete this segment of the CSS and delete the corresponding segment of js/vcode.js
+*/
+.mega-menu ul a {
+	color: #666;
+}
+.mega-menu > ul > li > a {
+	font-weight: bold !important
+}
+@media (max-width: 767px) {
+	.has-children ul {
+		display: block !important;
+		margin-left: 15px
+	}
+}
+@media (min-width: 768px) {
+	.dropdown.mega-menu {
+		position: static;
+	}
+	.mega-menu > .dropdown-menu {
+		left: 0;
+		right: 0;
+		overflow-x: auto
+	}
+	.mega-menu > ul > li {
+	  display:table-cell;
+	}
+	.mega-menu > ul ul {
+		position: relative;
+		display: block !important;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+		padding: 0
+	}
+	.dropdown-menu li {
+		border-right: 1px solid #e7e7e7
+	}
+    .dropdown-menu li li,
+    .dropdown-menu li:last-of-type {
+        border-right: 0
+    }
+}
+
+
+/*
+Max content widths
+*/
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto
+}
+
+/*
+Site Title
+*/
+
+#site-title {
+  margin-bottom: 40px
+}
+
+/*
+Main content
+*/
+
+#content article {
+  margin-bottom: 40px
+}
+#content header {
+  margin: 20px 0
+}
+#content section {
+  margin-bottom: 20px
+}
+#content footer {
+  padding-bottom: 20px
+}
+
+/*
+Sidebar
+*/
+
+.sidebar ul,
+.sidebar ol {
+  list-style-type: none;
+  padding: 0
+}
+.sidebar li {
+  margin: 10px 0
+}
+
+/*
+Hide form placeholders on focus
+*/
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+textarea:focus::-webkit-input-placeholder { color: transparent; }
+textarea:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
+textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
+
+/*
+Site footer
+*/
+
+.site-footer ul,
+.site-footer ol {
+  list-style-type: none;
+  padding: 0
+}
+.site-footer li {
+  margin: 10px 0
+}
+.site-sub-footer p {
+  text-align: center
+}
+
+.site-footer p {
+  text-align: center
+}
+
+/*
+Commentlist
+*/
+
+ol.commentlist {
+	counter-reset: li; /* Initiate a counter */
+	padding: 0
+}
+ol.commentlist ul {
+    padding: 0
+}
+ol.commentlist > li {
+	position: relative;
+	margin: 0 0 20px 0;
+	list-style: none /* Disable the normal item numbering */
+}
+ol.commentlist > li:before {
+    content: "Thread " counter(li); /* Use the counter as content */
+    counter-increment: li; /* Increment the counter by 1 */
+    position:absolute;  
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom-left-radius: 4px;
+    padding: 5px 20px 5px 10px;
+    color: #999
+}
+ol.commentlist li ol,
+ol.commentlist li ul {
+    list-style-type: none;
+    margin: 0
+}
+
+.commentlist li li {
+    background: #f8f8f8;
+}
+.commentlist li li li {
+    background: #fff
+}
+.commentlist li li li li {
+    background: #f8f8f8
+}
+.commentlist li li li li li li {
+    background: #fff
+}
+.commentlist li {
+    padding: 20px
+}
+.commentlist ul li {
+    margin-top: 20px;
+    margin-bottom: 0
+}
+.reply p {
+    margin: 0
+}
+
+/*
+WOOCOMMERCE - re-styling to match Bootstrap
+===========================================
+If you don't want this to use the WooCommerce plugin, or if you don't want these styles below, then delete this entire segment of the CSS and delete the corresponding segment of js/vcode.js
+*/
+
+.woocommerce a:focus {
+  outline: none
+}
+.woocommerce .count {
+  background: inherit
+}
+.woocommerce .added_to_cart {
+  display: block !important
+}
+.woocommerce .woocommerce-error:before,
+.woocommerce .woocommerce-info:before,
+.woocommerce .woocommerce-message:before,
+.woocommerce-page .woocommerce-error:before,
+.woocommerce-page .woocommerce-info:before,
+.woocommerce-page .woocommerce-message:before {
+  padding-top: 0
+}
+.woocommerce #content input.button, 
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button, 
+.woocommerce-page #content input.button, 
+.woocommerce-page #respond input#submit, 
+.woocommerce-page a.button, 
+.woocommerce-page button.button, 
+.woocommerce-page input.button {
+	/* .btn */
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-moz-user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	/* .btn-primary */
+	color: #FFF;
+	background: #337AB7;
+	border-color: #2E6DA4;
+	/* Extra fixes */ 
+	text-shadow: none;
+	box-shadow: none;
+}
+.woocommerce #content input.button:hover, 
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover, 
+.woocommerce-page #content input.button:hover, 
+.woocommerce-page #respond input#submit:hover, 
+.woocommerce-page a.button:hover, 
+.woocommerce-page button.button:hover, 
+.woocommerce-page input.button:hover {
+	/* .btn-primary:hover */
+	color: #FFF;
+	background: #286090;
+	border-color: #204D74;
+}
+.woocommerce #content input.button.alt, 
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt, 
+.woocommerce-page #content input.button.alt, 
+.woocommerce-page #respond input#submit.alt, 
+.woocommerce-page a.button.alt, 
+.woocommerce-page button.button.alt, 
+.woocommerce-page input.button.alt {
+	/* .btn */
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-moz-user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	/* .btn-success */
+	color: #FFF;
+	background-color: #5CB85C;
+	border-color: #4CAE4C;
+	/* Extra fixes */
+	text-shadow: none;
+	box-shadow: none;
+}
+.woocommerce #content input.button.alt:hover, 
+.woocommerce #respond input#submit.alt:hover, 
+.woocommerce a.button.alt:hover, 
+.woocommerce button.button.alt:hover, 
+.woocommerce input.button.alt:hover, 
+.woocommerce-page #content input.button.alt:hover, 
+.woocommerce-page #respond input#submit.alt:hover, 
+.woocommerce-page a.button.alt:hover, 
+.woocommerce-page button.button.alt:hover, 
+.woocommerce-page input.button.alt:hover {
+	/* Extras fixes */
+	background: none;
+	text-shadow: none;
+	/* .btn-success:hover */
+	color: #FFF;
+	background-color: #449D44;
+	border-color: #398439;
+	/* BOOTSTRAP THEME .btn-success:hover */
+	background-color: #419641;
+	background-position: 0px -15px;
+}
+
+.woocommerce .woocommerce-error,
+.woocommerce-page .woocommerce-error {
+	/* Extra fixes */
+	padding: 0;
+	margin: 0;
+	position: relative;
+	border-top: none;
+	background: none;
+	text-shadow: none;
+	list-style: outside none none !important;
+	width: auto;
+	box-shadow: none;
+	/* .alert */
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	/* .alert-danger */
+	color: #A94442;
+	background-color: #F2DEDE;
+	border-color: #EBCCD1;
+}
+.woocommerce .woocommerce-error:after, 
+.woocommerce .woocommerce-error:before, 
+.woocommerce-page .woocommerce-error:after, 
+.woocommerce-page .woocommerce-error:before {
+	display: none;
+}
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------
+
+--------------------------------------------------------*/
+
+
+
+
+h1{ font-size:30px; color:#0ca1ee; margin:0; font-family: "BoosterNextFYW01-Regular"; text-shadow:none;}
+h1.light{ font-family: "BoosterNextFYW01-Thin";}
+h1.bold{ font-family: "BoosterNextFYW01-Bold";}
+h1.lg{ font-size:40px;}
+
+/*---bg-color--*/
+.bg-white{ background:#FFF !important;}
+.bg-green{ background:#0ab640 !important;}
+.bg-orange{ background:#f05332 !important;}
+.bg-blue{ background:#0ca1ee !important;}
+
+/*---font-color--*/
+.white{ color:#FFF !important;}
+.green{ color:#0ab640 !important;}
+.orange{ color:#f05332 !important;}
+.blue{ color:#0ca1ee !important;}
+
+/*----btns---*/
+.btn-warning{ font-size:16px; color:#FFFFFF; font-family: "BoosterNextFYW01-Bold"; border:0; box-shadow:none; text-shadow:none; border-radius:4px; background:#f05332; padding:15px 25px;}
+.btn-warning:hover{ background:#0ab640;}
+/*---p-tag--*/
+p{ font-size:16px; line-height:26px; color:#4d4d4d;}
+
+
+
+/*-------------------------------------csss-----------------------------------------------*/
+body{ padding:0px 0 0 0; background-color:#FFFFFF; font-family: "BoosterNextFYW01-Regular"; }
+a:hover,a:focus{ text-decoration:none;}
+
+.p0{ padding:0 !important;}
+.p-t-10{ padding-top:10px !important; }
+.p-t-20{ padding-top:20px !important; }
+.p-t-30{ padding-top:30px !important; }
+.p-t-40{ padding-top:40px !important; }
+.p-t-50{ padding-top:50px !important; }
+.p-t-60{ padding-top:60px !important; }
+.p-t-70{ padding-top:70px !important; }
+.p-t-80{ padding-top:80px !important; }
+.p-t-120{ padding-top:120px !important; }
+
+.p-b-10{ padding-bottom:10px !important; }
+.p-b-20{ padding-bottom:20px !important; }
+.p-b-30{ padding-bottom:30px !important; }
+.p-b-40{ padding-bottom:40px !important; }
+.p-b-50{ padding-bottom:50px !important; }
+.p-b-120{ padding-bottom:120px !important; }
+
+.m0{ margin:0 !important;}
+.m-t-10{ margin-top:10px !important; }
+.m-t-20{ margin-top:20px !important; }
+.m-t-30{ margin-top:30px !important; }
+.m-t-40{ margin-top:40px !important; }
+.m-t-50{ margin-top:50px !important; }
+.m-t-60{ margin-top:60px !important; }
+.m-t-80{ margin-top:80px !important; }
+
+.m-b-10{ margin-bottom:10px !important; }
+.m-b-20{ margin-bottom:20px !important; }
+.m-b-30{ margin-bottom:30px !important; }
+.m-b-40{ margin-bottom:40px !important; }
+.m-b-50{ margin-bottom:50px !important; }
+.m-b-60{ margin-bottom:60px !important; }
+
+.spaser-50{ height:50px;}
+.spaser-60{ height:60px;}
+.spaser-70{ height:70px;}
+.spaser-80{ height:80px;}
+.spaser-90{ height:90px;}
+.spaser-100{ height:100px;}
+.spaser-110{ height:110px;}
+.spaser-120{ height:120px;}
+
+/*-------------------------------------csss-----------------------------------------------*/
+/*--------------------------------------------------
+nav
+---------------------------------------------------*/
+.navbar-default {
+   background:none; 
+    border-color:none;
+	border:0;
+	border-radius:0px;
+	text-shadow:none;
+	box-shadow:none;
+	margin-bottom:0;
+	text-shadow:none;
+	 font-family: "BoosterNextFYW01-Regular";
+	font-size:14px; z-index:1000 !important; 
+	 padding:0 100px 0 0px; 
+	
+	
+}
+#header.affix {
+    position: fixed;
+    top: 0;
+	display:block;
+    z-index:100;
+	width:100%;
+	z-index:1000;
+	border-radius:0;
+   background-color: #0ca1ee;
+  -webkit-transition: all 0.3s linear;
+-moz-transition: all 0.3s linear;-o-transition: all 0.3s linear;transition: all 0.3s linear;  padding:0 100px 0 0px; 
+}
+.navbar-default .navbar-brand{ margin:0; padding:0; position:relative; top:22px; left:100%;}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  
+}
+.navbar-default .navbar-nav > li { margin:36px 0 20px 27px; padding:0 0px; }
+.navbar-default .navbar-nav > li:last-child{ background:none; font-family: "BoosterNextFYW01-Bold"; color:#FFF;}
+.navbar-default .navbar-nav > li:last-child a{ padding-right:0;}
+
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color:#FFF; padding:0px 0 0px 0;  border-radius:0px; text-shadow:none; 
+	
+}
+.navbar-default .navbar-nav .btn-success{ border:1px solid #FFF; background:none;  font-size:14px;  box-shadow:none; padding:6px 12px; position:relative; top:-7px; border-radius:0;}
+.navbar-default .navbar-nav .btn-success:hover{-webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;-o-transition: all 0.5s linear;transition: all 0.5s linear;
+ background:#f05332; border:1px solid #f05332; color:#FFFFFF;}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #3cefff;
+	background:none;
+	box-shadow:none;
+
+
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+   color: #3cefff;
+	background:none;
+	box-shadow:none;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #3cefff;
+	background:none;
+	box-shadow:none;
+
+}
+/* caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #FFF;
+    border-bottom-color: #FFF;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #FFF;
+    border-bottom-color: #FFF;
+}
+.navbar-default .navbar-nav > .open > a .caret, 
+.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #FFF;
+    border-bottom-color: #FFF;
+}
+/* mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+}
+
+/*------------dropdown-----------*/
+.dropdown-menu {
+	background: #0ca1ee;
+ border-radius:2px !important; padding:0px;
+ border:0;  font-family: "BoosterNextFYW01-Bold";
+box-shadow:none;  margin-top:0; left:0px; top:54px; 
+
+}
+.dropdown-menu li {
+ border-bottom:none; display:block; border-bottom: 1px solid rgba(219, 219, 219, 0.3);
+}
+.dropdown-menu li a {
+color:#FFFFFF !important;
+padding:3px 10px;
+font-size:13px;   border-radius:0px;
+}
+.dropdown-menu li a:hover , .dropdown-menu li a:focus , .dropdown-menu li a:active{
+	background:rgba(219, 219, 219, 0.3) !important;
+	color:#FFF !important;
+
+	}
+
+.navbar-toggle {
+  background-color: none;
+  border: none !important;
+  border-radius: 0px; background:none !important; margin:10px 0px 0 0;
+}
+.menu-t{ position:absolute; right:60px; text-transform:uppercase; color:#4dc0a6;}
+.navbar-toggle:focus , .navbar-toggle:hover  {
+  background-color: none !important;
+ border: 1px solid #52ac33 ;
+  border-radius: 0px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color:#FFF;
+  height: 2px; width:45px;  border-radius: 0px; 
+}
+.navbar-collapse{   border-top:none; box-shadow: none;}
+/****---end-nav----*/
+
+/*-----------------------------------
+banner
+--------------------------------------*/
+.banner{ position:relative;}
+.banner .carousel-caption{ top:30%; bottom:auto;}
+.jump-bottom{ position:absolute; bottom:16%; left:50%; margin:0 0 0 -35px; background:#FFFFFF; border-radius:50%; text-align:center; padding-top:24px; width:70px; height:70px;}
+
+
+/*-----------body----------------------------------*/
+.gry-wraper{ position:relative; background:#eef1f4;}
+.gry-wraper .services-img{ border-radius:12px; box-shadow:4px 6px 8px #bfc2c5;}
+.gry-wraper h6{ font-size:18px; color:#6e6e6e; line-height:26px; margin:0;}
+.gry-wraper ul{ padding:0 0 0 30px;}
+.gry-wraper ul li{ font-size:15px; color:#4a4d50; margin:0 0 10px 0; font-family: "BoosterNextFYW01-Bold"; padding:0 0 0 42px; position:relative;}
+.gry-wraper ul li:before{ position:absolute; width:26px; height:26px; display:block; left:0; top:0; background:url(../images/right-check.png) no-repeat; content:"";}
+.line-devider{ position:relative; height:1px; background:#c8d0d7; display:block;}
+
+/*------------end-body-------------------
+quick contact
+----------------------------------------*/
+.quick-contact{ position:relative; background:url(../images/team-suppoet-img.jpg) no-repeat top center; background-size:cover; padding:410px 0 110px 0;}
+.quick-contact .form-control{ border:0; box-shadow:none; border-radius:2px; min-height:66px; padding-left:20px;}
+.quick-contact .btn-warning{ min-height:66px; background:#0ab640; text-transform:uppercase; letter-spacing:1px;}
+.quick-contact .form-control::-moz-placeholder {
+  color: #5d5d5d;
+  opacity: 1;
+}
+.quick-contact .form-control:-ms-input-placeholder {
+  color: #5d5d5d;
+}
+.quick-contact .form-control::-webkit-input-placeholder {
+  color: #5d5d5d;
+}
+
+
+/*---------------------------------------
+latest-work
+---------------------------------------*/
+.latest-work{ position:relative; background:#FFF;}
+
+
+
+
+/*--------------------------------
+footer
+---------------------------------*/
+footer{ position:relative; background:#343b43; padding:110px 0 74px 0;}
+footer h4{ font-size:14px; color:#FBFBFB; font-family: "BoosterNextFYW01-Bold"; margin:0;}
+footer ul li{  margin:0 0 4px 0; }
+footer ul li a{ color:#FFFFFF; font-size:13px; }
+footer ul li a i{ margin-right:10px;}
+footer ul li a:hover{ color:#cbcfd3;}
+footer .contact-detail-box{ background:#414850; padding:16px 22px; border-radius:4px; }
+footer .contact-detail-box p{ font-size:14px; color:#FFFFFF; margin:0 0 14px 0; line-height:20px;}
+footer .contact-detail-box p a{ color:#FFFFFF;}
+footer .contact-detail-box p:last-child{ margin:0;}
+footer .contact-detail-box i{ margin:0 10px 0 0;}
+span.line{ background:#474e56; height:1px; display:block; margin:30px 0;}
+footer  p { color:#c2c5c8;}

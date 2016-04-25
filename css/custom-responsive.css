@@ -1,0 +1,47 @@
+@media only screen and (orientation:landscape) {
+body { -webkit-text-size-adjust:none; }
+
+}
+
+
+@media screen and (min-width:200px) and (max-width:767px){
+	.navbar-default {font-size:13px; padding:0 15px 0 15px; }
+     #header.affix { padding:0 15px 0 15px; }
+	.navbar-default .navbar-nav > li { margin:7px 0 7px 0px; padding:0 0px; }
+	.navbar-collapse{ max-height:100% !important; overflow:hidden !important;}
+	.navbar-default .navbar-brand{ margin:0; padding:0; position:relative; top:10px; left:0px; width:140px;}
+	
+	/*----
+	banner
+	----*/
+	.banner h1{ font-size:22px;}
+	.banner .carousel-caption{ top:24%; bottom:auto;}
+	.owl-pagination{  bottom:10px!important; }
+	
+	
+}
+@media screen and (min-width:200px) and (max-width:479px){
+	.banner .btn-warning{ display:none;}
+	.banner h1{ font-size:18px;}
+	.owl-pagination{  bottom:10px!important; }
+	}
+
+@media screen and (min-width:768px) and (max-width:992px){
+.navbar-default {font-size:13px; padding:0 15px 0 15px; }
+#header.affix { padding:0 15px 0 15px; }
+.navbar-default .navbar-brand{ margin:0; padding:0; position:relative; top:22px; left:0; width:120px;}
+.navbar-default .navbar-nav > li { margin:24px 0 20px 10px; padding:0 0px; }
+.navbar-default .navbar-nav .btn-success{  font-size:13px;   padding:3px 8px; position:relative; top:-4px; border-radius:0;}
+
+/*----
+banner
+----*/
+.banner h1{ font-size:26px;}
+.banner .carousel-caption{ top:24%; bottom:auto;}
+.owl-pagination{  bottom:60px!important; }
+.jump-bottom{ bottom:20%;  margin:0 0 0 -20px;  padding-top:9px; width:40px; height:40px;}
+}
+@media screen and (min-width:993px) and (max-width:1200px){
+.navbar-default .navbar-brand{ margin:0; padding:0; position:relative; top:32px; left:15px; width:140px;}
+.jump-bottom{ bottom:16%;  margin:0 0 0 -23px;  padding-top:10px; width:46px; height:46px;}	
+}
